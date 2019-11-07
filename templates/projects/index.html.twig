@@ -10,13 +10,13 @@
 
         <body>
             <h1>Homework</h1>
-                <p>We have {{ projects|length }} projects: </p>
-                {% for projects in projects %}
+                <p>We have {{ projects|length }} projects: </p> /*permet de compter le nombre d'éléments dans la table projects*/
+                {% for element in projects %}
                 <ul>
-                    <li>{{ projects }}</li>
+                    <li>{{ element }}</li>
                 </ul>
                 {% endfor %}
-            <p> The current projects are {{ projects|join(', ', ' and ') }}</p>
+            <p> The current projects are {{ projects|join(', ', ' and ') }}</p> /*permet d'énumérer les éléments de */
         </body>
 
 {% endblock %}
