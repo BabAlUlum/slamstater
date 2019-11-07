@@ -12,18 +12,10 @@ class ProjectsController extends AbstractController
      */
     public function index()
     {
-        return $this->render('projects/index.html.twig', [
-            'controller_name' => 'ProjectsController',
-        ]);
-    }
-
-    public function projects ()
-    {
-             
-        $Projects = [Project1,Project2, Project3] ;
+        $projects = ['Project 1','Project 2', 'Project 3', 'Project 4', 'Project 4'];
          
         return $this->render('projects/index.html.twig', [ 
-                           'projects' => $Projects,
+                           'projects' => $projects,
         ]);
     }  
 }

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Projects index!{% endblock %}
+{% block title %}Projects homework{% endblock %}
 
 {% block body %}
 
@@ -9,13 +9,14 @@
 </script>
 
         <body>
-            <h1>Projects</h1>
-            <ul>
-                {% if projects|length  = 0}
-                    {{ [1, 2, 3]|join(', ', ' and ') }}
-                         <p>The current projects are {{project}} </p>
-                {% endif %}
-            </ul>
+            <h1>Homework</h1>
+                <p>We have {{ projects|length }} projects: </p>
+                {% for projects in projects %}
+                <ul>
+                    <li>{{ projects }}</li>
+                </ul>
+                {% endfor %}
+            <p> The current projects are {{ projects|join(', ', ' and ') }}</p>
         </body>
 
 {% endblock %}
